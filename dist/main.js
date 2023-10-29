@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ UI)\n/* harmony export */ });\nclass UI {\n  static loadHomePage() {\n    console.log('Ready');\n  }\n}\n\n\n//# sourceURL=webpack://weather-app/./src/modules/UI.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ UI)\n/* harmony export */ });\nclass UI {\n  // static loadHomePage() {\n  // }\n\n  static getFal() {\n    fetch('https://one-api.ir/hafez/?token=683257:653d1f979f1f3', {mode: 'cors'})\n    .then(function(response) {\n      console.log(response.json());\n    })\n}\n}\n\n//# sourceURL=webpack://weather-app/./src/modules/UI.js?");
 
 /***/ })
 
