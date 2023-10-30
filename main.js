@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ UI)\n/* harmony export */ });\nclass UI {\n  static loadHomePage() {\n    // UI.initFal();\n    UI.getFal();\n  }\n\n  static getFal() {\n    const falPage = document.querySelector('.fal p');\n    fetch('https://one-api.ir/hafez/?token=683257:653d1f979f1f3', { mode: 'cors' })\n      .then((response) => response.json())\n      .then((response) => {\n        falPage.textContent = response.result.RHYME;\n      });\n  }\n}\n\n\n//# sourceURL=webpack://weather-app/./src/modules/UI.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ UI)\n/* harmony export */ });\nclass UI {\n  static loadHomePage() {\n    UI.initFal();\n    UI.getFal();\n  }\n\n  static initFal() {\n    const falBtn = document.querySelector('.fal-btn');\n    falBtn.addEventListener('click', () => UI.getFal());\n  }\n\n  static getFal() {\n    const falPage = document.querySelector('.fal p');\n    fetch('https://one-api.ir/hafez/?token=683257:653d1f979f1f3', { mode: 'cors' })\n      .then((response) => response.json())\n      .then((response) => {\n        falPage.textContent = response.result.RHYME;\n      });\n  }\n}\n\n\n//# sourceURL=webpack://weather-app/./src/modules/UI.js?");
 
 /***/ })
 

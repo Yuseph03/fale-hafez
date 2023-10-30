@@ -42,10 +42,10 @@ header h1 {
 
 .fal {
     background-color: var(--orange);
-    font-size: x-large;
+    font-size: 22px;
     text-align: center;
     line-height: normal;
-    min-height: 100px;
+    min-height: 200px;
     padding: 10px;
     width: 60%;
     margin: auto;
