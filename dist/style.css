@@ -1,0 +1,84 @@
+:root {
+    --orange: #CD5C08;
+    --beige: #F5E8B7;
+    --sage: #C1D8C3;
+    --teal: #6A9C89;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gulzar', serif;;
+}
+
+html {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/hafez-tomb.jpg);
+/* footer support */
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    background-color: var(--sage);
+    width: 100%;
+}
+
+header h1 {
+    margin: auto;
+    color: var(--beige);
+    text-shadow: 3px 2px var(--orange);
+}
+
+.main {
+    margin-top: 3em;
+    padding: 55px;
+    display: grid;
+    row-gap: 2em;
+    background-color: var(--beige);
+    opacity: 80%;
+}
+
+.fal {
+    background-color: var(--orange);
+    font-size: x-large;
+    text-align: center;
+    line-height: normal;
+    min-height: 100px;
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+}
+
+.fal-btn {
+    border: none;
+    padding: 3em;
+    opacity: 100%;
+    margin: auto;
+}
+
+/* foooter */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    background-color: var(--sage);
+    font-size: 20px;
+  }
+  
+  .fa-github {
+    color: var(--orange);
+    font-size: 22px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
