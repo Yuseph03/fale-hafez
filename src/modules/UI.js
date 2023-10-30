@@ -1,7 +1,12 @@
 export default class UI {
   static loadHomePage() {
-    // UI.initFal();
+    UI.initFal();
     UI.getFal();
+  }
+
+  static initFal() {
+    const falBtn = document.querySelector('.fal-btn');
+    falBtn.addEventListener('click', () => UI.getFal());
   }
 
   static getFal() {
