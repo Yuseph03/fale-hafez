@@ -3,7 +3,8 @@
     --beige: #F5E8B7;
     --sage: #C1D8C3;
     --teal: #6A9C89;
-    --big-font: 22px;
+    --big-font: 24px;
+    --small-font: 20px;
 }
 
 html {
@@ -15,8 +16,6 @@ html {
 body {
     margin: 0;
     font-family: 'Gulzar', serif;
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -33,37 +32,42 @@ header h1 {
 
 .main { 
     display: flex;
+    justify-content: center;
     gap: 1em;
     background: rgb(245, 232, 183, 0.5);
     min-height: calc(100vh - 104px - 48px);
     font-size: var(--big-font);
-}
-
-.fal-main {
-    text-align: center;
-    line-height: normal;
-}
-
-.fal-side {
     position: relative;
 }
 
+.fal-side {
+    flex-shrink: 2;
+}
+
 .fal {
+    flex-shrink: 1;
     background-color: rgb(205, 92, 8, 0.8);
     border-radius: 18px;
-    margin: 2em;
-    padding: 2em;
+    margin: 1em;
+    padding: 1em;
     text-align: center;
-    line-height: normal;
+    line-height: 2em;
+}
+
+.fal-title {
+    font-weight: bold;
+}
+
+.fal-paragraph {
+    white-space: pre;
 }
 
 .fal-meaning {
     background-color: rgb(106, 156, 137, 0.8);
     border-radius: 18px;
-    margin: 2em;
-    padding: 2em;
-    text-align: center;
-    line-height: normal;
+    margin: 1em;
+    padding: 1em;
+    line-height: 2em;
 }
 
 .hafez {
@@ -75,13 +79,48 @@ header h1 {
     border-top-left-radius: 60%;
 }
 
+/* button and animation */
+
+.fal-btn-container {
+    width: fit-content;
+    margin: auto;
+}
+
 .fal-btn {
-    border: none;
-    border-radius: 13px;
-    padding: 1em;
-    font-size: 22px;
-    background: var(--sage);
-    margin: auto;       
+    cursor: pointer;
+    font-size: var(--big-font);
+    transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+    transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+    width: 8em;
+    height: 4em;
+}
+
+.fal-btn:hover {
+    transform: rotateX(-90deg);
+}
+
+.side {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    height: 4em;
+    width: 10em;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+.top {
+    background: var(--orange);
+    color: var(--beige);
+    transform: rotateX(90deg) translate3d(0, 0, 2em);
+}
+  
+.front {
+    background: var(--beige);
+    color: var(--orange);
+    box-shadow: inset 0 0 0 5px var(--orange);
+    transform: translate3d(0, 0, 2em);
 }
 
 /* foooter */
@@ -94,14 +133,37 @@ header h1 {
     width: 100%;
     background-color: var(--sage);
     font-size: 24px;
-  }
+}
   
-  .fa-github {
+.fa-github {
     color: var(--orange);
-    font-size: 22px;
+    font-size: 28px;
     transition: transform 0.3s ease-in-out;
-  }
+}
   
-  .fa-github:hover {
+.fa-github:hover {
     transform: rotate(360deg) scale(1.2);
+ }
+
+/* Media queries */
+  
+@media (max-width: 700px) {
+    .main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font: var(--small-font);
+    }
+
+    .fal-btn-container {
+        width: min-content;
+        margin: auto;
+    }
+
+    .fal-btn {
+        font: var(--small-font);
+    }
+
+    .hafez {
+        visibility: hidden;
+    }
   }
