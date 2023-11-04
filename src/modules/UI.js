@@ -10,11 +10,17 @@ export default class UI {
   }
 
   static getFal() {
-    const falPage = document.querySelector('.fal p');
+    const falTitle = document.querySelector('.fal-title');
+    const falPar = document.querySelector('.fal-paragraph');
+    const falNum = document.querySelector('.fal-number');
+    const falMeaning = document.querySelector('.fal-meaning');
     fetch('https://one-api.ir/hafez/?token=683257:653d1f979f1f3', { mode: 'cors' })
       .then((response) => response.json())
       .then((response) => {
-        falPage.textContent = response.result.RHYME;
+        falTitle.textContent = response.result.TITLE;
+        falPar.textContent = response.result.RHYME;
+        falMeaning.textContent = response.result.MEANING;
+        falNum.textContent = response.result.SHOMARE;
       });
   }
 }
