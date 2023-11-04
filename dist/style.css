@@ -3,20 +3,20 @@
     --beige: #F5E8B7;
     --sage: #C1D8C3;
     --teal: #6A9C89;
-}
-
-body {
-    margin: 0;
-    font-family: 'Gulzar', serif;;
+    --big-font: 22px;
 }
 
 html {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(images/hafez-tomb.jpg);
-/* footer support */
-    position: relative;
-    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gulzar', serif;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -31,46 +31,69 @@ header h1 {
     text-shadow: 3px 2px var(--orange);
 }
 
-.main {
-    margin-top: 3em;
-    padding: 55px;
-    display: grid;
-    row-gap: 2em;
-    background-color: var(--beige);
-    opacity: 80%;
+.main { 
+    display: flex;
+    gap: 1em;
+    background: rgb(245, 232, 183, 0.5);
+    min-height: calc(100vh - 104px - 48px);
+    font-size: var(--big-font);
+}
+
+.fal-main {
+    text-align: center;
+    line-height: normal;
+}
+
+.fal-side {
+    position: relative;
 }
 
 .fal {
-    background-color: var(--orange);
-    font-size: 22px;
+    background-color: rgb(205, 92, 8, 0.8);
+    border-radius: 18px;
+    margin: 2em;
+    padding: 2em;
     text-align: center;
     line-height: normal;
-    min-height: 200px;
-    padding: 10px;
-    width: 60%;
-    margin: auto;
+}
+
+.fal-meaning {
+    background-color: rgb(106, 156, 137, 0.8);
+    border-radius: 18px;
+    margin: 2em;
+    padding: 2em;
+    text-align: center;
+    line-height: normal;
+}
+
+.hafez {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20vw;
+    background: var(--beige);
+    border-top-left-radius: 60%;
 }
 
 .fal-btn {
     border: none;
-    padding: 3em;
-    opacity: 100%;
-    margin: auto;
+    border-radius: 13px;
+    padding: 1em;
+    font-size: 22px;
+    background: var(--sage);
+    margin: auto;       
 }
 
 /* foooter */
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     width: 100%;
     background-color: var(--sage);
-    font-size: 20px;
+    font-size: 24px;
   }
   
   .fa-github {
