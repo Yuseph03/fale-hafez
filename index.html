@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html dir="rtl" lang="fa-IR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,23 +19,29 @@
         <h1>فال حافظ</h1>
       </header>
       <main class="main">
+          <div class="fal-side">
+            <p class="fal-meaning"></p>
+            <div class="fal-btn-container">
+              <div class="fal-btn">
+                <span class="side top">حالا فال</span>
+                <span class="side front">اول نیت</span>
+              </div>
+            </div>
+            <img class="hafez" src="images/hafez.png" alt="">
+          </div>
           <div class="fal-main">
             <div class="fal">
               <p class="fal-title"></p>
-              <p class="fal-paragraph"><p class="fal-number"></p></p>
+              <div class="fal-paragraph"></div>
+              <p class="fal-number"></p>
             </div>
-          </div>
-          <div class="fal-side">
-            <p class="fal-meaning"></p>
-            <button class="fal-btn">فال</button>
-            <img class="hafez" src="images/hafez.png" alt="">
           </div>
       </main>
       <footer class="footer">
-        <p><script>document.write(new Date().getFullYear())</script> Yuseph03</p>
+        <p><script>document.write(new Date().toLocaleDateString('fa-IR'))</script>Yuseph03</p>
         <a href="https://github.com/yuseph03" target="_blank">
-          <i class="fab fa-github"></i
-        ></a>
+          <i class="fab fa-github"></i>
+        </a>
       </footer>
 </body>
 </html>
